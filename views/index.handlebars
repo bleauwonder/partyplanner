@@ -1,0 +1,38 @@
+<h1>Plan that Party</h1>
+
+<h2>What do you need to do?</h2>
+
+<ul>
+  {{#each task}}
+    {{#unless completed}}
+      {{> plan/task-block completed=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Ready for the Party!</h2>
+
+<ul>
+  {{#each task}}
+    {{#if completed}}
+      {{> plan/task-block completed=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Task</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ta">Task:</label>
+    <input type="text" id="ta" name="task">
+  </div>
+
+  <div class="form-group">
+    <label for="completed">Completed?</label><br>
+    <input type="radio" name="completed" value="1" checked> Ready!<br>
+    <input type="radio" name="completed" value="0"> Not yet
+  </div>
+
+  <button type="submit">Add Task</button>
+</form>

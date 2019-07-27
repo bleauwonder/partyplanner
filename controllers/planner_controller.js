@@ -16,10 +16,11 @@ router.get("/", function(req, res) {
   });
   
   router.post("/api/partyplan", function(req, res) {
+      console.log(req.body)
     pp.create([
       "task", "completed"
     ], [
-      req.body.task, req.body.completed
+      req.body.name, req.body.completed
     ], function(result) {
       // Send back the ID of the new quote
       res.json({ id: result.insertId });
@@ -29,6 +30,7 @@ router.get("/", function(req, res) {
   router.put("/api/partyplan/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
+    console.log(req.body);
     console.log("condition", condition);
   
     pp.update({

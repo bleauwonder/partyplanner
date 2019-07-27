@@ -3,9 +3,9 @@
 <h2>What do you need to do?</h2>
 
 <ul>
-  {{#each task}}
+  {{#each plan}}
     {{#unless completed}}
-      {{> plan/task-block completed=true}}
+      {{> parties/task-block completed=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -13,9 +13,9 @@
 <h2>Ready for the Party!</h2>
 
 <ul>
-  {{#each task}}
+  {{#each plan}}
     {{#if completed}}
-      {{> plan/task-block completed=false}}
+      {{> parties/task-block completed=false}}
     {{/if}}
   {{/each}}
 </ul>

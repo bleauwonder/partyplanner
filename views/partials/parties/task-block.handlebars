@@ -1,0 +1,9 @@
+<li>
+	{{task}}
+
+	<button class="complete-task" data-id="{{id}}" data-newtask="{{completed}}">
+		{{#if completed}}COMPLETED!{{else}}NOT YET!{{/if}}
+	</button>
+
+	<button class="delete-task" data-id="{{this.id}}">DELETE!</button>
+</li>

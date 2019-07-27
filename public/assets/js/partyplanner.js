@@ -2,19 +2,20 @@
 $(function() {
     $(".complete-task").on("click", function(event) {
       var id = $(this).data("id");
-      var newComplete = $(this).data("newcomplete");
+      var newTask = $(this).data("newtask");
+      console.log("TCL: newTask", newTask)
   
-      var newCompleteState = {
-        completed: newComplete
+      var newTaskState = {
+        completed: newTask
       };
   
       // Send the PUT request.
       $.ajax("/api/partyplan/" + id, {
         type: "PUT",
-        data: newCompleteState
+        data: newTaskState
       }).then(
         function() {
-          console.log("changed task to", newComplete);
+          console.log("changed task to", newTask);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -29,7 +30,7 @@ $(function() {
         name: $("#ta").val().trim(),
         completed: $("[name=completed]:checked").val().trim()
       };
-  
+  console.log(newTask);
       // Send the POST request.
       $.ajax("/api/partyplan", {
         type: "POST",

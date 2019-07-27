@@ -1,4 +1,4 @@
-<h1>Plan that Party</h1>
+<h1>Party Planner To Do List</h1>
 
 <h2>What do you need to do?</h2>
 
@@ -10,7 +10,7 @@
   {{/each}}
 </ul>
 
-<h2>Ready for the Party!</h2>
+<h2>All Set!</h2>
 
 <ul>
   {{#each plan}}
@@ -33,7 +33,11 @@
     <input type="radio" name="completed" value="1" checked> Ready!<br>
     <input type="radio" name="completed" value="0"> Not yet
   </div>
-  <div class="add-task-btn">
-  <button type="submit">Add Task</button>
-  </div>
+  
+  <button class="button" type="submit">
+    <div class="pattern">
+      <div class="target inner bg2"></div>
+      </div>
+      <div class="text">Add Task</div>
+    </button>
 </form>

@@ -1,5 +1,14 @@
+body {
+  background-image: url(/assets/image/party.png);
+}
+
+h1, h2 {
+  text-align: center;
+  background: green;
+}
 
 li {
+    text-align: center;
     padding: 5px;
     margin: 5px;
     background: #faebd7;
@@ -10,12 +19,17 @@ li {
   }
   
   .create-update-form {
+    text-align: center;
     padding: 5px;
     margin: 5px;
     background: aqua;
   }
   
   .form-group {
+    text-align: center;
     margin-bottom: 5px;
   }
   
+  .add-task-btn {
+    text-align: center;
+  }

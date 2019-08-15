@@ -6,7 +6,6 @@ var partyplan = {
         cb(res);
       });
     },
-    // The variables cols and vals are arrays.
     create: function(cols, vals, cb) {
       orm.create("plan", cols, vals, function(res) {
         cb(res);
@@ -23,6 +22,5 @@ var partyplan = {
       });
     }
   };
-  
-  // Export the database functions for the controller (planner_controller.js).
+
   module.exports = partyplan;
